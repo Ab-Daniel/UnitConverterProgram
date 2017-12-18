@@ -1,0 +1,8 @@
+public class UnitConTest
+{
+	public static void main(String[ ] args)
+	{
+		UnitCon unit = new UnitCon();
+		unit.getCon();							//print the information
+	}		
+}
