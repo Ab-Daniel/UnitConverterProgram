@@ -1,0 +1,163 @@
+import java.util.Scanner;
+
+public class UnitCon
+{
+	public UnitCon()								//constructor
+	{		
+		console = new Scanner(System.in);
+		System.out.print("Convert from: ");
+		from = console.next();
+		
+		System.out.print("Convert to: ");
+		to = console.next();
+		
+		System.out.print("Value: ");
+		v = console.nextDouble();
+	}
+	public void getCon()								//get the converted form
+	{
+		if(from.equalsIgnoreCase(IN))
+		{
+			if(to.equalsIgnoreCase(IN))
+				re = ((v * .0254) / .0254);
+			if(to.equalsIgnoreCase(FT))
+				re = ((v * .0254) / .305);
+			if(to.equalsIgnoreCase(MI))
+				re = ((v * .0254) / 1609);
+			if(to.equalsIgnoreCase(M))
+				re = ((v * .0254) / 1);
+			if(to.equalsIgnoreCase(MM))
+				re = ((v * .0254) / .001);
+			if(to.equalsIgnoreCase(CM))
+				re = ((v * .0254) / .01);
+			if(to.equalsIgnoreCase(KM))
+				re = ((v * .0254) / 1000);
+		}
+		if(from.equalsIgnoreCase(FT))
+		{
+			if(to.equalsIgnoreCase(IN))
+				re = ((v * .305) / .0254);
+			if(to.equalsIgnoreCase(FT))
+				re = ((v * .305) / .305);
+			if(to.equalsIgnoreCase(MI))
+				re = ((v * .305) / 1609);
+			if(to.equalsIgnoreCase(M))
+				re = ((v * .305) / 1);
+			if(to.equalsIgnoreCase(MM))
+				re = ((v * .305) / .001);
+			if(to.equalsIgnoreCase(CM))
+				re = ((v * .305) / .01);
+			if(to.equalsIgnoreCase(KM))
+				re = ((v * .305) / 1000);
+		}
+		if(from.equalsIgnoreCase(MI))
+		{
+			if(to.equalsIgnoreCase(IN))
+				re = ((v * 1609) / .0254);
+			if(to.equalsIgnoreCase(FT))
+				re = ((v * 1609) / .305);
+			if(to.equalsIgnoreCase(MI))
+				re = ((v * 1609) / 1609);
+			if(to.equalsIgnoreCase(M))
+				re = ((v * 1609) / 1);
+			if(to.equalsIgnoreCase(MM))
+				re = ((v * 1609) / .001);
+			if(to.equalsIgnoreCase(CM))
+				re = ((v * 1609) / .01);
+			if(to.equalsIgnoreCase(KM))
+				re = ((v * 1609) / 1000);
+		}
+		if(from.equalsIgnoreCase(M))
+		{
+			if(to.equalsIgnoreCase(IN))
+				re = ((v * 1) / .0254);
+			if(to.equalsIgnoreCase(FT))
+				re = ((v * 1) / .305);
+			if(to.equalsIgnoreCase(MI))
+				re = ((v * 1) / 1609);
+			if(to.equalsIgnoreCase(M))
+				re = ((v * 1) / 1);
+			if(to.equalsIgnoreCase(MM))
+				re = ((v * 1) / .001);
+			if(to.equalsIgnoreCase(CM))
+				re = ((v * 1) / .01);
+			if(to.equalsIgnoreCase(KM))
+				re = ((v * 1) / 1000);
+		}
+		if(from.equalsIgnoreCase(MM))
+		{
+			if(to.equalsIgnoreCase(IN))
+				re = ((v * .001) / .0254);
+			if(to.equalsIgnoreCase(FT))
+				re = ((v * .001) / .305);
+			if(to.equalsIgnoreCase(MI))
+				re = ((v * .001) / 1609);
+			if(to.equalsIgnoreCase(M))
+				re = ((v * .001) / 1);
+			if(to.equalsIgnoreCase(MM))
+				re = ((v * .001) / .001);
+			if(to.equalsIgnoreCase(CM))
+				re = ((v * .001) / .01);
+			if(to.equalsIgnoreCase(KM))
+				re = ((v * .001) / 1000);
+		}
+		if(from.equalsIgnoreCase(CM))
+		{
+			if(to.equalsIgnoreCase(IN))
+				re = ((v * .01) / .0254);
+			if(to.equalsIgnoreCase(FT))
+				re = ((v * .01) / .305);
+			if(to.equalsIgnoreCase(MI))
+				re = ((v * .01) / 1609);
+			if(to.equalsIgnoreCase(M))
+				re = ((v * .01) / 1);
+			if(to.equalsIgnoreCase(MM))
+				re = ((v * .01) / .001);
+			if(to.equalsIgnoreCase(CM))
+				re = ((v * .01) / .01);
+			if(to.equalsIgnoreCase(KM))
+				re = ((v * .01) / 1000);
+		}
+		if(from.equalsIgnoreCase(KM))
+		{
+			if(to.equalsIgnoreCase(IN))
+				re = ((v * 1000) / .0254);
+			if(to.equalsIgnoreCase(FT))
+				re = ((v * 1000) / .305);
+			if(to.equalsIgnoreCase(MI))
+				re = ((v * 1000) / 1609);
+			if(to.equalsIgnoreCase(M))
+				re = ((v * 1000) / 1);
+			if(to.equalsIgnoreCase(MM))
+				re = ((v * 1000) / .001);
+			if(to.equalsIgnoreCase(CM))
+				re = ((v * 1000) / .01);
+			if(to.equalsIgnoreCase(KM))
+				re = ((v * 1000) / 1000);
+		}
+		System.out.println(v + " " + from + " = " + re + " " + to);
+	}
+	private String from;										//constants and instance fields
+	private String to;
+	private double v;
+	private double re;
+	private Scanner console;
+	private static final String IN = "in";
+	private static final String FT = "ft";
+	private static final String MI = "mi";
+	private static final String M = "m";
+	private static final String MM = "mm";
+	private static final String CM = "cm";
+	private static final String KM = "km";
+}
+© 2017 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
